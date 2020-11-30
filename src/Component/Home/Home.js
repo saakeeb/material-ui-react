@@ -15,7 +15,7 @@ const Home = () => {
         console.log('button click', id);
     }
     return (
-        <div>
+        <div style={{marginTop: '3.9rem'}}>
             {
                 post.map(pd=><Post posts={pd} handleClick={handleClick} ></Post>)
             }

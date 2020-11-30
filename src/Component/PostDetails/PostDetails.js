@@ -1,17 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import FakeData from '../FakeData/FakeData';
-import Post from '../Post/Post';
+import FakeData from '../Component/FakeData/FakeData';
 
 const PostDetails = () => {
     const {postIdNum} = useParams();
-    const postId = FakeData.find(pd => pd.key === {postIdNum});
-    console.log('postId', postId);
-    console.log(Object.values(postIdNum));
-    
+    const postId = FakeData.find(pd => pd.id === parseInt(postIdNum));
+    console.log(postId);
     return (
         <div>
-            <h3>{postIdNum} no Post details</h3>
+            <h3>{postIdNum} no details here</h3>
+
         </div>
     );
 };

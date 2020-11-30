@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    margin: 15,
   },
 });
 
@@ -30,8 +31,8 @@ const Post = (props) => {
                     </CardContent>
             </CardActionArea>
             <CardActions style={{justifyContent: 'center'}}>
-                <Link to={"/user/"+id}>
-                    <Button size="small" variant="contained" color="secondary" onClick={()=>props.handleClick(id)} style={{textDecoration:'none'}}>
+                <Link to={"/user/"+id} style={{ textDecoration: 'none' }}>
+                    <Button size="small" variant="contained" color="secondary" onClick={()=>props.handleClick(id)}>
                         Show Details Post
                     </Button>
                 </Link>
