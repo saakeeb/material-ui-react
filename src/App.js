@@ -9,6 +9,9 @@ import {
   Link
 } from "react-router-dom";
 import PostDetails from './Component/PostDetails/PostDetails';
+import FriendRequest from './Component/FriendRequest/FriendRequest';
+import Notification from './Component/Notification/Notification';
+import Message from './Message/Message';
 
 function App() {
   return (
@@ -24,6 +27,18 @@ function App() {
           </Route>
           <Route path="/user/:postIdNum">
             <PostDetails></PostDetails>
+          </Route>
+          <Route path="/friendRequest">
+            <FriendRequest></FriendRequest>
+          </Route>
+          <Route path="/notification">
+            <Notification></Notification>
+          </Route>
+          <Route path="/message">
+            <Message></Message>
+          </Route>
+          <Route path="/users">
+            <h4 style={{marginTop: '3.9rem'}}>Users details coming soon</h4>
           </Route>
           <Route path="/*">
             <h3>Not Found</h3>

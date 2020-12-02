@@ -37,7 +37,7 @@ const CommentDetails = (props) => {
                             </Grid>
                             <Box component="span" m={1} className={useStyles.box} style={{background:'lightGrey', display:'inlineBlock', padding:'10px'}}>
                                 <Typography color="textSecondary" style={{textAlign:'left'}}><strong>{name}</strong> </Typography>
-                                <Typography color="textSecondary">{comment} </Typography>
+                                <Typography color="textSecondary" style={{textAlign:'left'}}>{comment} </Typography>
                             </Box>
                             
                         </Grid>
