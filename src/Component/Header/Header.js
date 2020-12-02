@@ -38,16 +38,16 @@ const Header = () => {
         <div className={useStyles.root} >
             <AppBar position="fixed" >
                 <Toolbar variant="dense">
-                    <Link to="/home"><IconButton edge="start" className={useStyles.menuButton} color="inherit" aria-label="menu">
+                    <Link to="/home"><IconButton edge="start" className={useStyles.menuButton} color="inherit" aria-label="menu" title='Home'>
                         <MenuIcon /> 
                     </IconButton></Link>
                     <Grid container alignItems="center" className={useStyles.root} style={{margin:'0 auto', padding:'0 auto'}}>
-                        <Typography variant="h6" color="inherit" className={useStyles.type} style={{margin:'0 auto', padding:'0 auto'}}>
+                        <Typography variant="h6" color="inherit" className={useStyles.type} style={{margin:'0 auto', padding:'0 auto'}} title="User Post">
                             User Posts
                         </Typography>
                         <Divider orientation="vertical" flexItem />
 
-                        <Typography variant="h6" color="inherit" className={useStyles.type} style={{margin:'0 auto', padding:'0 auto'}}>
+                        <Typography variant="h6" color="inherit" className={useStyles.type} style={{margin:'0 auto', padding:'0 auto'}} title="User Comment">
                             User Comments
                         </Typography>
                         <Divider orientation="vertical" flexItem />

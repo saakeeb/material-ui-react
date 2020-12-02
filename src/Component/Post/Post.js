@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 
 const Post = (props) => {
 
-    const {title, id} = props.posts;
+    const {title, id, body} = props.posts;
    
     return (
         <Card className={useStyles.root} >
@@ -27,14 +27,19 @@ const Post = (props) => {
                 <CardMedia component="img" alt="User Post" height="140"style={{width: '300px', margin:'10px auto'}}
                 image='https://picsum.photos/200' title="User Post"/>
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">{title}</Typography>
+                        <Typography gutterBottom variant="h6" component="h2">{title}</Typography>
+                        {
+                            props.postBody && <Typography gutterBottom variant="p" component="h2" style={{fontSize:'12px'}}>{body}</Typography>
+                        }
+                        
                     </CardContent>
             </CardActionArea>
             <CardActions style={{justifyContent: 'center'}}>
                 <Link to={"/user/"+id} style={{ textDecoration: 'none' }}>
-                    <Button size="small" variant="contained" color="secondary" onClick={()=>props.handleClick(id)}>
-                        Show Details Post
-                    </Button>
+                    { props.buttonShow && <Button size="small" variant="contained" color="secondary" onClick={()=>props.handleClick(id)}>
+                                        Show Details Post </Button>
+                    }
+                    
                 </Link>
                 
             </CardActions>

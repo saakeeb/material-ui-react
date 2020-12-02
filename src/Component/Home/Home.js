@@ -12,12 +12,11 @@ const Home = () => {
         .then(data=> setPost(data))
     },[]);
     const handleClick = (id)=>{
-        console.log('button click', id);
     }
     return (
         <div style={{marginTop: '3.9rem'}}>
             {
-                post.map(pd=><Post posts={pd} handleClick={handleClick} ></Post>)
+                post.map(pd=><Post posts={pd} handleClick={handleClick} buttonShow={true}  postBody={false}></Post>)
             }
         </div>
     );
