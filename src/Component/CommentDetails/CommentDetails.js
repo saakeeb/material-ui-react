@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Container from "@material-ui/core/Container";
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 
 const useStyles = makeStyles({
     root: {
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
 
 const CommentDetails = (props) => {
     const {name, pic, comment} =props.comment;
-    
+    const [likeColor, setLikeColor] = useState('');
 
     return (
         <div style={{alignItems:'center'}}>
@@ -35,13 +36,12 @@ const CommentDetails = (props) => {
                             <Grid item style={{padding:'0 10px'}}>
                                 <Avatar alt="Remy Sharp" src={pic}/>
                             </Grid>
-                            <Box component="span" m={1} className={useStyles.box} style={{background:'lightGrey', display:'inlineBlock', padding:'10px'}}>
-                                <Typography color="textSecondary" style={{textAlign:'left'}}><strong>{name}</strong> </Typography>
-                                <Typography color="textSecondary" style={{textAlign:'left'}}>{comment} </Typography>
+                            <Box component="span" m={1} className={useStyles.box} style={{background:'lightGrey', display:'inlineBlock', padding:'10px', textAlign:'left'}}>
+                                <Typography color="textSecondary" ><strong>{name}</strong> </Typography>
+                                <Typography color="textSecondary">{comment} </Typography>
+                                <ThumbUpAltIcon onClick={ ()=> setLikeColor(likeColor ? '' : 'primary')} color={likeColor}></ThumbUpAltIcon>
                             </Box>
-                            
                         </Grid>
-                        
             </Container>
         </div>
     );
