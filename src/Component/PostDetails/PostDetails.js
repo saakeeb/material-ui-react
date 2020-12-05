@@ -39,7 +39,7 @@ const PostDetails = () => {
     },[])
 
     return (
-        <div style={{marginTop: '3.9rem'}}>
+        <div style={{marginTop: '8rem'}}>
             <h3>Post number {postIdNum} details</h3>
             <Post posts={postId} buttonShow={false} postBody={true}></Post>
             

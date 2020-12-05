@@ -14,7 +14,7 @@ const Home = () => {
     const handleClick = (id)=>{
     }
     return (
-        <div style={{marginTop: '3.9rem'}}>
+        <div style={{marginTop: '7.5rem'}}>
             {
                 post.map(pd=><Post posts={pd} handleClick={handleClick} buttonShow={true}  postBody={false}></Post>)
             }

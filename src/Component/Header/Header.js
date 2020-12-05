@@ -17,7 +17,6 @@ import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneO
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      marginBottom: 10,
     },
     menuButton: {
       marginRight: theme.spacing(200),
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = () => {
     return (
-        <div className={useStyles.root} >
+        <container className={useStyles.root}>
             <AppBar position="fixed" >
                 <Toolbar variant="dense">
                     <Link to="/home">
@@ -59,11 +58,12 @@ const Header = () => {
                         
                         <Divider orientation="vertical" flexItem />
 
-                            <InputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} style={{margin:'0 auto', padding:'0 0.2rem'}}/>
+                            <InputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} style={{margin:'0 auto', padding:'0 auto'}}/>
                         <Divider orientation="vertical" flexItem />
+                        
                         <container style={{margin:'0 auto', padding:'0 auto'}}>
                             <Link to='/friendRequest' style={{padding:'0 15px', color:'white'}}>
-                                <Badge badgeContent={7} color="secondary" >
+                                <Badge badgeContent={7} color="secondary">
                                     <AccountCircleOutlinedIcon />
                                 </Badge>
                             </Link>
@@ -82,7 +82,7 @@ const Header = () => {
                     </Grid>
                 </Toolbar>
             </AppBar>
-        </div>
+        </container>
     );
 };
 
